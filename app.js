@@ -19,14 +19,28 @@ function readJsonFile() {
 // Initially read the JSON file
 let jsonData = readJsonFile();
 
-// Update jsonData every 5 minutes (300000 milliseconds)
+// Update jsonData every 20 seconds
 setInterval(() => { 
-    jsonData = readJsonFile();
-    console.log('Data refreshed at ' + new Date().toLocaleTimeString());
+    try {
+        jsonData = readJsonFile();
+        console.log('Data refreshed at ' + new Date().toLocaleTimeString());
+    } catch (error) {
+        console.error('Error refreshing data:', error);
+    }
 }, 20000);
 
 app.use('/api/arrivals', (req, res) => {
     let r = { data: [] };
+
+    // Force reload the JSON data to ensure we have the latest changes
+    try {
+        const latestData = readJsonFile();
+        if (latestData && latestData.length > 0) {
+            jsonData = latestData;
+        }
+    } catch (error) {
+        console.error('Error reading latest data:', error);
+    }
 
     // Convert the object values to an array and then iterate
     Object.values(jsonData).forEach((entry, index) => {
@@ -42,6 +56,11 @@ app.use('/api/arrivals', (req, res) => {
                 scheduled: daysAgo,            // Days ago the post was made
                 remarks: entry.service_status   // Notes
             };
+
+            // Special handling for "000" (today) entries
+            if (daysAgo === "000") {
+                console.log(`Found today entry: ${entry.last_stop_name}`);
+            }
 
             // Determine status based on resource status (Open or Application Required)
             let itemStatus = '';

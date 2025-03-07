@@ -663,4 +663,23 @@ body {
     stroke-dashoffset: 0;
 }
 
+/* Add special styling for today entries */
+.splitflap .row.today-entry {
+  background-color: rgba(255, 215, 0, 0.1); /* Subtle gold background */
+  border-left: 4px solid #FFD700; /* Gold left border */
+  position: relative;
+}
+
+/* Style for the TDY text */
+.splitflap .row .today-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 22px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
 

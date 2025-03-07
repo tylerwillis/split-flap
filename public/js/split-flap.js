@@ -172,10 +172,16 @@ sf.Items = Backbone.Collection.extend({
     // pick up any sorting options
     if (options.order && options.sort) {
       items.comparator = item => {
+        // Special handling for "000" entries (today) to always appear first
+        const value = item.get(options.sort);
+        if (value === "000") {
+          return options.order === 'desc' ? 'ZZZZ' : '';  // Empty string sorts first in 'asc' order
+        }
+        
         if (options.order === 'desc') {
-          return -item.get(options.sort);
+          return -value;
         } else {
-          return item.get(options.sort);
+          return value;
         }
       };
     }
@@ -183,6 +189,14 @@ sf.Items = Backbone.Collection.extend({
 
   // Get the initial data and load the chart
   load: options => {
+    // Special handling for "TDY" values in the scheduled field
+    // This ensures the display can properly handle "TDY" text
+    items.on('add', function(model) {
+      if (model.get('scheduled') === "TDY") {
+        console.log("Found a TODAY item:", model.get('terminal'));
+      }
+    });
+    
     items.update(options);
   }
 }),

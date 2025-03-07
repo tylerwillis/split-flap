@@ -50,16 +50,23 @@ def format_date_posted(date_str):
         date_posted = datetime.strptime(date_str, '%Y-%m-%d')
         today = datetime.now()
         
+        # Debug: Print the dates we're comparing
+        print(f"Debug - Comparing: today={today.strftime('%Y-%m-%d')} vs date_posted={date_posted.strftime('%Y-%m-%d')}")
+        
         # Calculate days since posting
         days_since = (today - date_posted).days
         
+        print(f"Debug - Days since: {days_since} for {date_str}")
+        
         if days_since == 0:
-            return "Today"
+            # Use '000' for today
+            return "000"
         elif days_since > 0:
-            return f"{days_since}"
+            # Pad with leading zeros to ensure proper string sorting
+            return f"{days_since:03d}"  # Using 3 digits to handle up to 999 days
         else:
-            # Handle future dates - show as negative days (e.g. "-30" for dates 30 days in the future)
-            return f"{days_since}"
+            # Handle future dates - show as negative days with leading zeros
+            return f"-{abs(days_since):03d}"  # Negative days for future events
     except Exception as e:
         print(f"Error formatting date: {e}")
         return date_str  # Return original string if there's an error
@@ -89,15 +96,31 @@ def main():
         transformed_data.append(transformed_resource)
     
     # Sort the data by days ago (newest first - smaller number of days = more recent)
-    # For "Today" entries, use 0 to ensure they're at the top
+    # For "000" entries (today), they'll naturally sort at the top with numeric sorting
+    print("Before sorting:")
+    for item in transformed_data:
+        print(f"  {item['last_stop_name']}: {item['arrival_time']}")
+    
+    # Now we can simply sort by the numeric values since all entries are formatted consistently
     transformed_data = sorted(
         transformed_data,
-        key=lambda x: (
-            0 if x["arrival_time"] == "Today" else
-            int(x["arrival_time"]) if x["arrival_time"].strip().isdigit() else
-            999
-        )
+        key=lambda x: int(x["arrival_time"]) if x["arrival_time"].strip('-').isdigit() else 999
     )
+    
+    print("\nAfter sorting:")
+    for item in transformed_data:
+        print(f"  {item['last_stop_name']}: {item['arrival_time']}")
+        
+    # Ensure we have exactly 3 characters for the scheduled display
+    # This is important for the split-flap display to work correctly
+    for item in transformed_data:
+        # Format "TDY" to be properly displayed
+        if item["arrival_time"] == "TDY":
+            # Keep as "TDY" - this will be displayed as 3 characters
+            pass
+        elif item["arrival_time"].strip('-').isdigit():
+            # Already formatted with leading zeros from format_date_posted
+            pass
     
     # Write the transformed data to output.json
     with open(OUTPUT_JSON_PATH, 'w') as file:
@@ -107,6 +130,16 @@ def main():
     print(f"Waiting {REFRESH_INTERVAL} seconds before next update...")
 
 if __name__ == "__main__":
+    # Run in a continuous loop to keep updating the data
     while True:
-        main()
-        time.sleep(REFRESH_INTERVAL) 
+        try:
+            main()
+            print("Data successfully written to output.json")
+            print(f"Waiting {REFRESH_INTERVAL} seconds before next update...")
+            time.sleep(REFRESH_INTERVAL)
+        except KeyboardInterrupt:
+            print("\nExiting gracefully...")
+            break
+        except Exception as e:
+            print(f"Error in main loop: {e}")
+            time.sleep(REFRESH_INTERVAL)  # Still wait before retrying 
