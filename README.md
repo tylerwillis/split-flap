@@ -1,38 +1,146 @@
-# Virtual Split-Flap Display
+# San Francisco Moving Resources Split-Flap Display
 
 ![Screenshot](thumbnail.png)
 
-This is a simulation of a split-flap display (often called a Solari board) designed to run locally in a web browser. It dynamically loads JSON data from the MTA data feeds and renders that data as characters and images on the board. Individual characters are animated using CSS sprites.
+A digital split-flap display board (Solari board) showing resources, services, and goods for people moving to San Francisco. This project creates a nostalgic, animated display reminiscent of classic train station arrival/departure boards, but repurposed to showcase moving assistance resources.
 
-This board is fully configurable by changing the markup and using different sprite images, and the included files can help you get started if you wanted to emulate NYC Subway data, or your own project. The board can be run on a vertical or horizontal monitor. You may want to change the number of rows loaded and data to pull depending on your needs. 
+## 🌉 About The Project
 
-This project utilizes the split flap template from [baspete's project](https://github.com/baspete/Split-Flap/), and the Python code utilizes endpoints provided by [Transiter](https://github.com/jamespfennell/transiter)
+This project adapts a subway split-flap display to show information about services and goods for people moving to San Francisco. It provides a visually engaging, animated board that displays categorized resources with their status.
+
+### Features
+
+- **Animated Split-Flap Display**: Authentic animation mimicking mechanical character flipping
+- **Resource Categories**: Color-coded categories including Housing, Services, Items, Jobs, etc.
+- **Status Indicators**: Visual indicators showing if resources are "Open" or require application
+- **Auto-Refresh**: Display automatically updates every 5 minutes
+- **Easy Data Management**: Simple CSV format for adding/editing resources
+- **Responsive Display**: Works in horizontal or vertical orientation
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v10 or higher)
+- [Python](https://www.python.org/) (v3.6 or higher)
+
+### Installation
+
+1. Clone the repository
+   ```sh
+   git clone https://github.com/yourusername/sf-moving-resources-board.git
+   cd sf-moving-resources-board
+   ```
+
+2. Install Node.js dependencies
+   ```sh
+   npm install
+   ```
+
+3. Run the application
+   ```sh
+   npm start
+   ```
+   This will start both the Python script to generate the data and the Node.js server.
+
+4. Open your browser and visit:
+   ```
+   http://localhost:8080
+   ```
+
+### Manual Start (Alternative)
+
+If you prefer to start components individually:
+
+1. First, run the Python script to generate the data:
+   ```sh
+   python sf_resources.py
+   ```
+
+2. In a separate terminal, start the Node.js server:
+   ```sh
+   node app.js
+   ```
+
+## 📊 How It Works
+
+1. **Data Source**: All listings are stored in `sf_resources.csv` - a simple CSV file that you can edit
+2. **Data Processing**: The Python script `sf_resources.py` converts CSV data to JSON format
+3. **Server**: A Node.js application (`app.js`) serves the data through an API endpoint
+4. **Frontend**: HTML/CSS/JS creates the animated split-flap board display
+5. **Auto-refresh**: The board refreshes every 5 minutes with the latest data
+
+## 🔧 Customizing Listings
+
+### Adding or Editing Resources
+
+Simply edit the `sf_resources.csv` file, following this structure:
+```
+type,offer,date_posted,notes,status
+Housing,2BR Apartment in Mission,2023-08-15,Pet friendly,Open
+Service,Moving assistance,2023-09-01,Available weekends,Application Required
+```
+
+The columns are:
+- **type**: Category of the listing (see available categories below)
+- **offer**: Brief description of what's being offered
+- **date_posted**: Date in YYYY-MM-DD format
+- **notes**: Additional details or description
+- **status**: Either "Open" or "Application Required"
+
+After editing, save the file. The display will refresh with your new data within 5 minutes, or you can restart the application to see changes immediately.
+
+### Available Categories
+
+The following categories are available, each with a distinct color:
+- **Housing** (Blue)
+- **Service** (Green)
+- **Item** (Orange)
+- **Event** (Deep Orange)
+- **Job** (Purple)
+- **Resource** (Emerald)
+- **Transport** (Red)
+- **Storage** (Yellow)
+- **Education** (Light Blue)
+- **Financial** (Teal)
+
+## 🎨 Advanced Customization
+
+### Changing Display Settings
+
+You can modify the following settings in `public/index.html`:
+- **Number of rows**: Change `numRows` and `maxResults` values
+- **Sort order**: Change `sort` to 'scheduled' (by date), 'line' (by type), or 'terminal' (by offer)
+- **Refresh interval**: Adjust `pageInterval` (milliseconds)
+
+### Replacing Category Icons
+
+The current icons are colored blocks with text. To use custom icons:
+
+1. Create square icons, ideally 115px × 40px
+2. Open `public/plugins/arrivals/custom.css`
+3. Find the section with comments `/* CATEGORY TYPE ICONS */`
+4. Replace the background color with image paths:
+   ```css
+   .splitflap .image span.Housing {
+     background: url('housing-icon.png') no-repeat center;
+     background-size: contain;
+   }
+   ```
+
+## 🔍 Troubleshooting
+
+- **Changes not appearing**: The board refreshes every 5 minutes. Restart the server to see changes immediately.
+- **Server won't start**: Make sure no other process is using port 8080. You can change the port in `app.js` if needed.
+- **CSV errors**: Ensure your CSV has the correct format with all required columns.
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 🙏 Acknowledgments
 
 
-
-## Running the Program
-To run this version, edit the station code in the python file located on line 7. For example, the station code for 14th St-Union Sq is R20. Using R20 will give both north and south departures for this station. If you only want to display one direction, use 'R20S' or 'R20N'. You can use the stations.csv file to look up your station. When you're ready, run the Python file. It will run on a continuous loop, updating every 45 seconds until you end the program. You can adjust the cadence by changing the value on line 123 of the python code. 
-
-When you've set that up, run the app.js file using node.js. 
-
-Then, navigate to `http://locahost:8080` in your browser and you're good to go. Happy traveling! 
-
-## Customization
-
-This project is completely customizable to your preferences. You can adjust things like number of rows, refresh intervals, sorting by time or route, and much more. 
-
-Some examples:
-Number of rows: To adjust the number of rows, change the value in line 30 within the app.js file, and lines 109 & 112 in index.html. 
-
-Sort order: To change the sorting format, change lines 110/111 in index.html. This is helpful if you have a station with a lot of different train lines, like Times Square:
-
-
-<img src="vertical.png" width="50%">
-
-
-
-Refresh interval: Change line 123 in the Python file and line 23 in app.js
-
-## Demo
-
-I have set up a temporary demo of this application [here](https://splitflap.glitch.me/). As each users screen size may be different, you can zoom in/out in the browser to fit your screen. There are enough rows loaded to run this vertically as well. You may experience lagging on some older mobile devices. If you experience lagging with your own project, you can adjust the 'stagger' time in index.html, or editing the refresh speed of other elements.
+- Forked from David Tropiansky's [Subway Split Flap Solari v1.5](https://github.com/DavidTropiansky/Subway-Split-Flap-Solari-v1.5)
+- Original split-flap template from [baspete's project](https://github.com/baspete/Split-Flap/)
+- Inspired by classic Solari boards found in train stations and airports
