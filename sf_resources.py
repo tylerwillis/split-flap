@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 # Path to the CSV file (relative to the script location)
 CSV_FILE_PATH = 'sf_resources.csv'
 OUTPUT_JSON_PATH = 'output.json'
-REFRESH_INTERVAL = 300  # 5 minutes in seconds
+REFRESH_INTERVAL = 20  # 20 seconds in seconds
 
 def read_csv_data():
     """Read data from CSV file and convert to the required JSON format."""
