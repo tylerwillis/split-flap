@@ -10,7 +10,7 @@ a {
   text-decoration: none;
 }
 .splitflap {
-  width: 1900px;
+  width: 2020px; /* Reduce from 2200px to remove excess whitespace */
   overflow: hidden;
   white-space: nowrap;
   margin: 5px 5px;
@@ -39,6 +39,17 @@ a {
   float: left;
   margin-right: 30px;
 }
+
+/* Remove fixed width constraints from remarks group */
+.splitflap .remarks {
+  width: auto; /* Allow natural width instead of fixed width */
+  min-width: 500px; /* Reduced from 550px to fit better with container */
+  margin-left: 0; /* Remove the added margin */
+  overflow: visible; /* Allow content to be fully visible */
+  text-overflow: clip; /* Don't add ellipsis */
+  white-space: nowrap; /* Ensure text stays on one line */
+}
+
 .splitflap .separator {
   float: left;
   height: 50px; /* Increased from 40px */
@@ -50,28 +61,32 @@ a {
 .splitflap .status {
   margin-right: 0;
   position: absolute; /* Position absolutely within the row */
-  right: 100px; /* Increase right margin to prevent overlap */
-  top: 50%; /* Center vertically */
+  right: 10px; /* Add a small margin from the edge */
+  top: calc(50% - 10px); /* Raise by 10px from center */
   transform: translateY(-50%); /* Fine-tune vertical centering */
-  height: 22px; /* Match the height of the status dots */
+  height: 24px; /* Match the height of the status dots */
+  z-index: 10; /* Ensure status indicators appear above other elements */
 }
 .splitflap .status div {
   float: left;
   margin: 0 5px 0 0; /* Reduce margin and remove top margin */
-  width: 22px; /* Increased from 18px */
-  height: 22px; /* Increased from 18px */
+  width: 24px; /* Increase from 22px for better visibility */
+  height: 24px; /* Increase from 22px for better visibility */
+  border-radius: 50%; /* Make sure they're perfectly round */
+  box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Add a subtle shadow for definition */
 }
 
 .splitflap .status div.on {
-  background-position: -22px 0; /* Adjusted for new size */
+  background-position: -24px 0; /* Adjusted for new size */
+  box-shadow: 0 0 12px rgba(255,255,255,0.5); /* Add a glow effect when active */
 }
 .splitflap .status .sA {
   background: url('../img/lights_green.png') no-repeat;
-  background-size: 44px auto; /* Scale the image */
+  background-size: 48px auto; /* Update from 44px to match new size */
 }
 .splitflap .status .sB {
   background: url('../img/lights_red.png') no-repeat;
-  background-size: 44px auto; /* Scale the image */
+  background-size: 48px auto; /* Update from 44px to match new size */
 }
 .splitflap .full,
 .splitflap .number,
@@ -391,3 +406,8 @@ a {
 .splitflap .character span.ccom {
   background-position: -975px 0px;
 } /* , */
+
+/* Add specific positioning for the scheduled group (Days Ago) */
+.splitflap .scheduled {
+  margin-left: 0; /* Revert the added margin */
+}
