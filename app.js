@@ -23,7 +23,7 @@ let jsonData = readJsonFile();
 setInterval(() => { 
     jsonData = readJsonFile();
     console.log('Data refreshed at ' + new Date().toLocaleTimeString());
-}, 300000);
+}, 20000);
 
 app.use('/api/arrivals', (req, res) => {
     let r = { data: [] };

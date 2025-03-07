@@ -245,10 +245,10 @@ body {
 
 /* Status indicators should be at the right side of each row */
 .splitflap .status {
-  position: absolute; /* Position absolutely within the row */
-  right: 60px; /* Move even further to the right */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Fine-tune vertical centering */
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(calc(-50% - 7px)); /* Moved status icons up by 7px */
 }
 
 /* Current date styling */

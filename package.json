@@ -9,7 +9,7 @@
   },
 
   "scripts": {
-    "run-python": "python3 \"Solari Board V2.1.py\" &",
+    "run-python": "source venv/bin/activate && python3 sf_resources.py &",
     "start-node": "node app.js",
     "start": "npm run run-python && npm run start-node"
   }
