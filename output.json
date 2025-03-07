@@ -1,164 +1,142 @@
-{
-  "data": [
+[
     {
-      "line": "Item",
-      "terminal": "Home Office Setup Giveaway",
-      "scheduled": "000",
-      "remarks": "Perfect for remote work",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Item",
+        "arrival_time": "Today",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Home Office Setup Giveaway",
+        "service_status": "Perfect for remote work"
     },
     {
-      "line": "Event",
-      "terminal": "Monthly Founders' Mixer",
-      "scheduled": "000",
-      "remarks": "Networking and drinks",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Event",
+        "arrival_time": "Today",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Monthly Founders' Mixer",
+        "service_status": "Networking and drinks"
     },
     {
-      "line": "Housing",
-      "terminal": "Modern Condo in Financial District",
-      "scheduled": "000",
-      "remarks": "Short-term stay",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Housing",
+        "arrival_time": "Today",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Modern Condo in Financial District",
+        "service_status": "Short-term stay"
     },
     {
-      "line": "Service",
-      "terminal": "Photography Walk",
-      "scheduled": "001",
-      "remarks": "Explore SF through a lens",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Service",
+        "arrival_time": "001",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Photography Walk",
+        "service_status": "Explore SF through a lens"
     },
     {
-      "line": "Resource",
-      "terminal": "Local Hangout Spots Guide",
-      "scheduled": "002",
-      "remarks": "Curated by founders",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Resource",
+        "arrival_time": "002",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Local Hangout Spots Guide",
+        "service_status": "Curated by founders"
     },
     {
-      "line": "Service",
-      "terminal": "Weekend Sailing Trip",
-      "scheduled": "004",
-      "remarks": "Join local founders",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Service",
+        "arrival_time": "004",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Weekend Sailing Trip",
+        "service_status": "Join local founders"
     },
     {
-      "line": "Event",
-      "terminal": "Exclusive Dinner Party",
-      "scheduled": "006",
-      "remarks": "Hosted by local VC",
-      "status": "B",
-      "stop": "San Francisco"
+        "route_id": "Event",
+        "arrival_time": "006",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Exclusive Dinner Party",
+        "service_status": "Hosted by local VC"
     },
     {
-      "line": "Housing",
-      "terminal": "Loft Space in SoMa",
-      "scheduled": "008",
-      "remarks": "Short-term stay",
-      "status": "B",
-      "stop": "San Francisco"
+        "route_id": "Housing",
+        "arrival_time": "008",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Loft Space in SoMa",
+        "service_status": "Short-term stay"
     },
     {
-      "line": "Event",
-      "terminal": "Beach Bonfire Networking",
-      "scheduled": "010",
-      "remarks": "Relaxed social event",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Event",
+        "arrival_time": "010",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Beach Bonfire Networking",
+        "service_status": "Relaxed social event"
     },
     {
-      "line": "Housing",
-      "terminal": "Shared Apartment in Mission",
-      "scheduled": "013",
-      "remarks": "Stay for a month",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Housing",
+        "arrival_time": "013",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Shared Apartment in Mission",
+        "service_status": "Stay for a month"
     },
     {
-      "line": "Transport",
-      "terminal": "Airport Pickup by Founder",
-      "scheduled": "015",
-      "remarks": "Personal welcome to SF",
-      "status": "B",
-      "stop": "San Francisco"
+        "route_id": "Transport",
+        "arrival_time": "015",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Airport Pickup by Founder",
+        "service_status": "Personal welcome to SF"
     },
     {
-      "line": "Event",
-      "terminal": "Startup Pitch Night",
-      "scheduled": "018",
-      "remarks": "Join as my guest",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Event",
+        "arrival_time": "018",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Startup Pitch Night",
+        "service_status": "Join as my guest"
     },
     {
-      "line": "Service",
-      "terminal": "City Tour by Local Founder",
-      "scheduled": "020",
-      "remarks": "Explore hidden gems",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Service",
+        "arrival_time": "020",
+        "current_stop": "San Francisco",
+        "last_stop_name": "City Tour by Local Founder",
+        "service_status": "Explore hidden gems"
     },
     {
-      "line": "Event",
-      "terminal": "Tech Founder Hiking Group",
-      "scheduled": "023",
-      "remarks": "Monthly outdoor meetups",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Event",
+        "arrival_time": "023",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Tech Founder Hiking Group",
+        "service_status": "Monthly outdoor meetups"
     },
     {
-      "line": "Housing",
-      "terminal": "Temporary Stay in Nob Hill",
-      "scheduled": "025",
-      "remarks": "Private room available",
-      "status": "B",
-      "stop": "San Francisco"
+        "route_id": "Housing",
+        "arrival_time": "025",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Temporary Stay in Nob Hill",
+        "service_status": "Private room available"
     },
     {
-      "line": "Event",
-      "terminal": "Sunday Brunch Meetup",
-      "scheduled": "028",
-      "remarks": "Local founders gathering",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Event",
+        "arrival_time": "028",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Sunday Brunch Meetup",
+        "service_status": "Local founders gathering"
     },
     {
-      "line": "Housing",
-      "terminal": "Couch Surfing in Castro",
-      "scheduled": "030",
-      "remarks": "Great location",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Housing",
+        "arrival_time": "030",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Couch Surfing in Castro",
+        "service_status": "Great location"
     },
     {
-      "line": "Service",
-      "terminal": "Coffee Chat with Serial Founder",
-      "scheduled": "033",
-      "remarks": "Insights and networking",
-      "status": "B",
-      "stop": "San Francisco"
+        "route_id": "Service",
+        "arrival_time": "033",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Coffee Chat with Serial Founder",
+        "service_status": "Insights and networking"
     },
     {
-      "line": "Event",
-      "terminal": "Friday Night Rooftop Party",
-      "scheduled": "036",
-      "remarks": "Be my plus one",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Event",
+        "arrival_time": "036",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Friday Night Rooftop Party",
+        "service_status": "Be my plus one"
     },
     {
-      "line": "Housing",
-      "terminal": "Guest Room in Pacific Heights",
-      "scheduled": "038",
-      "remarks": "Stay up to a week",
-      "status": "A",
-      "stop": "San Francisco"
+        "route_id": "Housing",
+        "arrival_time": "038",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Guest Room in Pacific Heights",
+        "service_status": "Stay up to a week"
     }
-  ]
-}
+]
