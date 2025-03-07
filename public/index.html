@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Francisco Moving Resources</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="plugins/arrivals/custom.css">
+</head>
+<body>
+    <!-- CURRENT TIME -->
+    <div id="current-time" style="position: absolute; top: 25px; left: 25px; font-size: 30px; font-weight: bold;"></div>
+    
+    <!-- CURRENT DATE (moved to right side) -->
+    <div id="current-date" style="position: absolute; top: 25px; right: 25px; font-size: 30px; font-weight: bold;"></div>
+
+    <!-- CONTAINER -->
+    <div id="board" class="chartContainer splitflap">
+        <h1 id="station-title" style="text-align: center; text-decoration: overline;">San Francisco Moving Resources</h1>
+
+        <!-- Header: Updated headers for SF moving resources -->
+        <div class="header" style="width:120px;margin-left:0px;">Type</div>
+        <div class="header" style="width:360px;margin-left:30px;text-align:left;">Offer</div>
+        <div class="header" style="width:120px;margin-left:350px;text-align:center;">Days Ago</div>
+        <div class="header" style="width:370px;margin-left:120px;text-align:left;">Notes</div>
+
+        <!-- rows will be placed here dynamically from #row_template -->
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- ROW TEMPLATE -->
+    <script type="text/template" id="row_template">
+        <div class="row">
+            <div class="group line"> <!-- category type -->
+                <div class="image"><span></span></div>
+            </div>
+
+            <div class="group terminal"> <!-- offer -->
+                <!-- Repeat full divs as needed -->
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+            </div>
+
+            <div class="group scheduled"> <!-- posted date -->
+              <div class="number"><span></span></div>
+              <div class="number"><span></span></div>
+              <div class="number"><span></span></div>
+            </div>
+
+            <div class="group remarks"> <!-- notes -->
+                <!-- Repeat full divs as needed -->
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+            </div>
+
+            <div class="group status"> <!-- status indicators -->
+                <div class="sA"></div> <!-- Open -->
+                <div class="sB"></div> <!-- Application Required -->
+            </div>
+        </div>
+    </script>
+    <!-- END ROW TEMPLATE -->
+
+    <!-- JS LIBRARIES -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+    <script type="text/javascript" src="js/split-flap.js"></script>
+    <script type="text/javascript" src="plugins/arrivals/custom.js"></script>
+
+    <!-- CUSTOMIZATION OPTIONS AND SCRIPT INITIALIZATION -->
+    <script type="text/javascript">
+        sf.options = {
+            plugin: 'arrivals', // Plugin to load
+            container: $('#board'), // Where in the DOM to put the board
+            template: $('#row_template'), // Where in the DOM to find the row template
+            numRows: 45, // number of rows to generate
+            sort: 'scheduled', // the column to sort by. Use 'scheduled' to sort by date posted, 'line' to sort by type, or 'terminal' to sort by offer.
+            order: 'asc', // the order to sort by
+            maxResults: 45, // number of results to retrieve from data feed
+            pageInterval: 20000, // delay between pages (ms)
+            stagger: 300 // delay between loading rows (ms)
+        };
+
+        $(document).ready(function() {
+            sf.board.init(sf.options);
+            sf.items.init(sf.options);
+            sf.items.load(sf.options);
+
+            // Update the current time and date every second
+            function updateTimeAndDate() {
+                const now = new Date();
+                
+                // Format time
+                let hours = now.getHours();
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                hours = hours ? hours : 12; // the hour '0' should be '12'
+                const timeString = `${hours}:${minutes} ${ampm}`;
+                
+                // Format date
+                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                const month = monthNames[now.getMonth()];
+                const day = now.getDate();
+                const year = now.getFullYear();
+                const dateString = `${month} ${day}, ${year}`;
+                
+                // Update the display
+                $('#current-time').text(timeString);
+                $('#current-date').text(dateString);
+            }
+
+            setInterval(updateTimeAndDate, 1000);
+            updateTimeAndDate(); // Initial call to display time and date immediately
+
+            // Set the title to San Francisco Moving Resources
+            $('#station-title').text('San Francisco Moving Resources');
+        });
+    </script>
+</body>
+</html>

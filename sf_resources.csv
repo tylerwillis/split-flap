@@ -1,0 +1,16 @@
+type,offer,date_posted,notes,status
+Housing,2BR Apartment in Mission,2023-08-15,Pet friendly,Open
+Service,Moving assistance,2023-09-01,Available weekends,Application Required
+Item,Furniture giveaway,2023-08-20,Pick up only,Open
+Job,Software Engineer,2023-08-25,Remote friendly,Application Required
+Resource,Neighborhood guide,2023-09-05,Free digital download,Open
+Housing,Studio in SOMA,2023-09-10,Utilities included,Open
+Service,Cleaning service,2023-09-12,First cleaning free,Application Required
+Item,Kitchen appliances,2023-09-15,Like new condition,Open
+Transport,Airport pickup service,2023-09-20,Available 24/7,Application Required
+Education,SF neighborhood orientation,2023-09-22,Group sessions available,Open
+Financial,Banking setup assistance,2023-09-25,Major banks covered,Open
+Storage,Temporary storage solution,2023-09-27,Climate controlled,Application Required
+Housing,3BR House in Sunset,2023-09-30,Backyard available,Application Required
+Job,Retail position,2023-10-01,Flexible hours,Open
+Resource,Healthcare providers list,2023-10-05,Accepting new patients,Open 

@@ -2,12 +2,14 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 
-const jsonFilePath = 'output.json'; // Replace with the path to your JSON file
+const jsonFilePath = 'output.json'; // Path to the JSON file with SF resources data
 
 // Function to read JSON file
 function readJsonFile() {
     try {
-        return JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
+        const data = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
+        console.log(`Data loaded with ${data.length} entries`);
+        return data;
     } catch (error) {
         console.error('Error reading the JSON file:', error);
         return []; // Return an empty array in case of an error
@@ -17,35 +19,49 @@ function readJsonFile() {
 // Initially read the JSON file
 let jsonData = readJsonFile();
 
-// Update jsonData every 30 seconds
+// Update jsonData every 5 minutes (300000 milliseconds)
 setInterval(() => { 
     jsonData = readJsonFile();
-}, 55000); // 30000 milliseconds = 30 seconds
+    console.log('Data refreshed at ' + new Date().toLocaleTimeString());
+}, 300000);
 
 app.use('/api/arrivals', (req, res) => {
     let r = { data: [] };
 
     // Convert the object values to an array and then iterate
     Object.values(jsonData).forEach((entry, index) => {
-        if (index <= 45) { // ADJUST THIS IF YOU WANT MORE  OR LESS  RESULTS
+        if (index <= 45) { // Display up to 45 results
+            // Get the days ago value
+            let daysAgo = entry.arrival_time;
+            
+            // Ensure the days ago is formatted properly for display
             let data = {
-                line: entry.route_id, 
-                stop: entry.current_stop,      // Using route_id as an example
-                terminal: entry.last_stop_name,    // Using last_stop_name as an example
-                scheduled: entry.arrival_time,
-                remarks: entry.service_status  // Using arrival_time as an example
+                line: entry.route_id,          // Category type (Housing, Service, etc.)
+                stop: entry.current_stop,      // Location (San Francisco)
+                terminal: entry.last_stop_name, // Offer description
+                scheduled: daysAgo,            // Days ago the post was made
+                remarks: entry.service_status   // Notes
             };
 
-                   // Let's add an occasional delayed flight.
-                data.status =  entry.service_status ;
-                if (data.status === 'SERVICE CHANGE' || data.status === 'DELAYS') {
-                    data.status = 'B';
-                } else {
-                    data.status = 'A' ;
-                }
-                
+            // Determine status based on resource status (Open or Application Required)
+            let itemStatus = '';
             
-
+            // Extract status from notes or service_status field
+            const notesLower = entry.service_status.toLowerCase();
+            
+            if (notesLower.includes('application required') || 
+                notesLower.includes('apply') ||
+                notesLower.includes('contact') ||
+                notesLower.includes('interview')) {
+                data.status = 'B'; // Red status for items requiring application
+                itemStatus = 'Application Required';
+            } else {
+                data.status = 'A'; // Green status for open items
+                itemStatus = 'Open';
+            }
+            
+            // Add formatted status to the data
+            data.itemStatus = itemStatus;
 
             r.data.push(data);
         }
@@ -59,4 +75,4 @@ app.use('/', express.static('public'));
 
 const port = process.env.PORT || 8080;
 app.listen(port);
-console.log('split flap started on port ' + port);
+console.log('SF Moving Resources board started on port ' + port);

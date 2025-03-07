@@ -1,870 +1,107 @@
 [
     {
-        "route_id": "6",
-        "arrival_time": 1,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
+        "route_id": "Resource",
+        "arrival_time": "518",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Healthcare providers list",
+        "service_status": "Accepting new patients"
     },
     {
-        "route_id": "L",
-        "arrival_time": 1,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
+        "route_id": "Job",
+        "arrival_time": "522",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Retail position",
+        "service_status": "Flexible hours"
     },
     {
-        "route_id": "W",
-        "arrival_time": 2,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
+        "route_id": "Housing",
+        "arrival_time": "523",
+        "current_stop": "San Francisco",
+        "last_stop_name": "3BR House in Sunset",
+        "service_status": "Backyard available"
     },
     {
-        "route_id": "5",
-        "arrival_time": 2,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bowling Green",
-        "service_status": "Good Service"
+        "route_id": "Storage",
+        "arrival_time": "526",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Temporary storage solution",
+        "service_status": "Climate controlled"
     },
     {
-        "route_id": "N",
-        "arrival_time": 3,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
+        "route_id": "Financial",
+        "arrival_time": "528",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Banking setup assistance",
+        "service_status": "Major banks covered"
     },
     {
-        "route_id": "W",
-        "arrival_time": 3,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Whitehall St-South Ferry",
-        "service_status": "Good Service"
+        "route_id": "Education",
+        "arrival_time": "531",
+        "current_stop": "San Francisco",
+        "last_stop_name": "SF neighborhood orientation",
+        "service_status": "Group sessions available"
     },
     {
-        "route_id": "L",
-        "arrival_time": 3,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
+        "route_id": "Transport",
+        "arrival_time": "533",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Airport pickup service",
+        "service_status": "Available 24/7"
     },
     {
-        "route_id": "5",
-        "arrival_time": 4,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Eastchester-Dyre Av",
-        "service_status": "Good Service"
+        "route_id": "Item",
+        "arrival_time": "538",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Kitchen appliances",
+        "service_status": "Like new condition"
     },
     {
-        "route_id": "L",
-        "arrival_time": 4,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
+        "route_id": "Service",
+        "arrival_time": "541",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Cleaning service",
+        "service_status": "First cleaning free"
     },
     {
-        "route_id": "Q",
-        "arrival_time": 5,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
+        "route_id": "Housing",
+        "arrival_time": "543",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Studio in SOMA",
+        "service_status": "Utilities included"
     },
     {
-        "route_id": "4",
-        "arrival_time": 5,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Woodlawn",
-        "service_status": "Good Service"
+        "route_id": "Resource",
+        "arrival_time": "548",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Neighborhood guide",
+        "service_status": "Free digital download"
     },
     {
-        "route_id": "L",
-        "arrival_time": 6,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
+        "route_id": "Service",
+        "arrival_time": "552",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Moving assistance",
+        "service_status": "Available weekends"
     },
     {
-        "route_id": "6",
-        "arrival_time": 7,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
+        "route_id": "Job",
+        "arrival_time": "559",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Software Engineer",
+        "service_status": "Remote friendly"
     },
     {
-        "route_id": "4",
-        "arrival_time": 7,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Crown Hts-Utica Av",
-        "service_status": "Good Service"
+        "route_id": "Item",
+        "arrival_time": "564",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Furniture giveaway",
+        "service_status": "Pick up only"
     },
     {
-        "route_id": "Q",
-        "arrival_time": 8,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 8,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 8,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 9,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 9,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 9,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Woodlawn",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 9,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Pelham Bay Park",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 11,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Pelham Bay Park",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "5",
-        "arrival_time": 12,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bowling Green",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 12,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 13,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 13,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "5",
-        "arrival_time": 13,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Eastchester-Dyre Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 13,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 14,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Parkchester",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "W",
-        "arrival_time": 15,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Whitehall St-South Ferry",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "W",
-        "arrival_time": 16,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 16,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 16,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 16,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 17,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 18,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 19,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Woodlawn",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 19,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Pelham Bay Park",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 19,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "New Lots Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 19,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 19,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 20,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 20,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 23,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 23,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 23,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 24,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Pelham Bay Park",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "5",
-        "arrival_time": 24,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Eastchester-Dyre Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "5",
-        "arrival_time": 24,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bowling Green",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 24,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "W",
-        "arrival_time": 25,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Whitehall St-South Ferry",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 25,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "New Lots Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 25,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 26,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "W",
-        "arrival_time": 27,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 28,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 28,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 28,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Canarsie-Rockaway Pkwy",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 29,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Woodlawn",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 29,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 30,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Pelham Bay Park",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 31,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 31,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 33,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 33,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 33,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 33,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "5",
-        "arrival_time": 34,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Eastchester-Dyre Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 35,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 36,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "W",
-        "arrival_time": 36,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 36,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Pelham Bay Park",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 36,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "New Lots Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 37,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 37,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 39,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Woodlawn",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 40,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 41,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 42,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 42,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 44,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 45,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "W",
-        "arrival_time": 46,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 46,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 46,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 47,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 47,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "New Lots Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 49,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Woodlawn",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 50,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 51,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 51,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 55,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 56,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 56,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "New Lots Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 56,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 57,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "W",
-        "arrival_time": 57,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 59,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 59,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 60,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 60,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "L",
-        "arrival_time": 61,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "8 Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 65,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "4",
-        "arrival_time": 65,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "New Lots Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 66,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 67,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 67,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 69,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 69,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 70,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 75,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "6",
-        "arrival_time": 75,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Brooklyn Bridge-City Hall",
-        "service_status": "DELAYS"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 79,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 80,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 81,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Coney Island-Stillwell Av",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 83,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 85,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 91,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 91,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Bay Ridge-95 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 93,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 96,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "N",
-        "arrival_time": 100,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Astoria-Ditmars Blvd",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "Q",
-        "arrival_time": 101,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "96 St",
-        "service_status": "Good Service"
-    },
-    {
-        "route_id": "R",
-        "arrival_time": 107,
-        "current_stop": "14 St-Union Sq",
-        "last_stop_name": "Queens Plaza",
-        "service_status": "Good Service"
+        "route_id": "Housing",
+        "arrival_time": "569",
+        "current_stop": "San Francisco",
+        "last_stop_name": "2BR Apartment in Mission",
+        "service_status": "Pet friendly"
     }
 ]

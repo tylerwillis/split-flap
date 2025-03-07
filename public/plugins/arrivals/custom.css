@@ -1,0 +1,331 @@
+/* ROUTE LOGOS DRUM */
+.splitflap .image {
+  float: left;
+  margin-right: 5px;
+  width: 115px;
+  height: 40px;
+  background: url('Route_bullets.png') no-repeat;
+  background-position: 0px 0px;
+}
+.splitflap .image span {
+  width: 115px;
+  height: 40px;
+  display: block;
+  background: url('Route_bullets.png') no-repeat;
+  background-position: 0px -38.3px; /* start with a blank */
+}
+
+.splitflap .image span.ctrn {
+  background-position: 0px -0px;
+} /* transition */
+.splitflap .image span.csp {
+  background-position: 0px -38.3px;
+} /* blank */
+.splitflap .image span.\31 {
+  background-position: 0px -78.5px;
+} /* 1 train */
+.splitflap .image span.\32 {
+  background-position: 0px -117.8px;
+} 
+.splitflap .image span.\33 {
+  background-position: 0px -157px;
+} 
+.splitflap .image span.\34 {
+  background-position: 0px -195.0px;
+} 
+.splitflap .image span.\35 {
+  background-position: 0px -234.0px;
+} 
+.splitflap .image span.\36 {
+  background-position: 0px -272px;
+} 
+.splitflap .image span.\36X {
+  background-position: 0px -311.8px;
+} 
+.splitflap .image span.\37 {
+  background-position: 0px -351.3px;
+} 
+.splitflap .image span.\37X {
+  background-position: 0px -390.6px;
+} 
+.splitflap .image span.A {
+  background-position: 0px -428.0px;
+} 
+.splitflap .image span.B {
+  background-position: 0px -468.1px;
+} 
+.splitflap .image span.C {
+  background-position: 0px -505.0px;
+} 
+.splitflap .image span.D {
+  background-position: 0px -544.0px;
+} 
+.splitflap .image span.E {
+  background-position: 0px -583.9px;
+} 
+.splitflap .image span.F {
+  background-position: 0px -622.1px;
+} 
+.splitflap .image span.FX {
+  background-position: 0px -622.1px;
+} 
+.splitflap .image span.G {
+  background-position: 0px -662.4px;
+} 
+.splitflap .image span.J {
+  background-position: -0.35px -700.7px;
+} 
+.splitflap .image span.L {
+  background-position: -0.24px -740.0px;
+} 
+.splitflap .image span.M {
+  background-position: 0px -779.0px;
+} 
+.splitflap .image span.N {
+  background-position: 0px -820.0px;
+} 
+.splitflap .image span.Q {
+  background-position: 0px -858.0px;
+} 
+.splitflap .image span.R {
+  background-position: 0px -900px;
+} 
+.splitflap .image span.GS {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.SI {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.H {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.FS {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.W {
+  background-position: 0px -980.0px;
+} 
+.splitflap .image span.Z {
+  background-position: 0px -1020.7px;
+} 
+
+/* CATEGORY TYPE ICONS */
+.splitflap .image {
+  float: left;
+  margin-right: 5px; /* Return to original margin */
+  width: 115px; /* Return to original width */
+  height: 40px; /* Return to original height */
+  background: #000; /* Black background */
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4); /* Enhanced shadow for depth */
+  border: 1px solid #444; /* Lighter border for better definition */
+}
+.splitflap .image span {
+  width: 115px; /* Return to original width */
+  height: 40px; /* Return to original height */
+  display: block;
+  background: #000; /* Black background */
+  border-radius: 5px;
+  color: #fff; /* White text */
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px; /* Adjusted to match original height */
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* Maintain increased font size for better readability */
+}
+
+/* Placeholder icons for each category type - Using even more vibrant colors that stand out on black */
+.splitflap .image span.ctrn {
+  background-color: #000; /* Black */
+} 
+.splitflap .image span.csp {
+  background-color: #000; /* Black */
+} 
+.splitflap .image span.Housing {
+  background-color: #2980b9; /* Richer Blue */
+} 
+.splitflap .image span.Service {
+  background-color: #27ae60; /* Richer Green */
+}
+.splitflap .image span.Item {
+  background-color: #f39c12; /* Richer Orange */
+}
+.splitflap .image span.Event {
+  background-color: #c0392b; /* Richer Deep Orange */
+}
+.splitflap .image span.Job {
+  background-color: #8e44ad; /* Purple */
+}
+.splitflap .image span.Resource {
+  background-color: #16a085; /* Richer Emerald */
+}
+.splitflap .image span.Transport {
+  background-color: #e74c3c; /* Red */
+}
+.splitflap .image span.Storage {
+  background-color: #f1c40f; /* Yellow */
+}
+.splitflap .image span.Education {
+  background-color: #3498db; /* Light Blue */
+}
+.splitflap .image span.Financial {
+  background-color: #1abc9c; /* Richer Teal */
+}
+
+/* Add text to the icons */
+.splitflap .image span.Housing:after {
+  content: "Housing";
+}
+.splitflap .image span.Service:after {
+  content: "Service";
+}
+.splitflap .image span.Item:after {
+  content: "Item";
+}
+.splitflap .image span.Event:after {
+  content: "Event";
+}
+.splitflap .image span.Job:after {
+  content: "Job";
+}
+.splitflap .image span.Resource:after {
+  content: "Resource";
+}
+.splitflap .image span.Transport:after {
+  content: "Transport";
+}
+.splitflap .image span.Storage:after {
+  content: "Storage";
+}
+.splitflap .image span.Education:after {
+  content: "Education";
+}
+.splitflap .image span.Financial:after {
+  content: "Financial";
+}
+
+/* STATUS INDICATORS */
+.splitflap .sA {
+  background-color: #2ecc71; /* Brighter Green for "Open" */
+}
+.splitflap .sB {
+  background-color: #e74c3c; /* Brighter Red for "Application Required" */
+}
+
+/* SF THEME COLORS - Updated for better contrast */
+body {
+  background-color: #0f1a24; /* Even darker navy blue background for better contrast */
+}
+
+.splitflap .header {
+  color: #FFFFFF; /* White for headers */
+  border-bottom: 3px solid #4A6B8A; /* Thicker border for better separation */
+  padding-bottom: 5px; /* Add some padding below the border */
+  font-weight: 800; /* Extra bold for better visibility */
+  letter-spacing: 1px; /* Spacing between letters for better readability */
+  text-align: center; /* Center all headers for consistency */
+}
+
+#station-title {
+  color: #FFFFFF; /* White for title */
+  border-bottom: 3px solid #4A6B8A; /* Thicker border */
+  margin-bottom: 40px; /* Even more space below title */
+  padding-bottom: 10px; /* Add padding below the border */
+  font-size: 3em; /* Larger title */
+  letter-spacing: 2px; /* Letter spacing for emphasis */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Text shadow for depth */
+}
+
+/* Row styling - updated to ensure status indicators work properly */
+.splitflap .row {
+  height: 60px; /* Original row height */
+  margin-bottom: 15px; /* Keep the added space between rows */
+  position: relative; /* Add position context for absolute positioning */
+}
+
+/* Status indicators should be at the right side of each row */
+.splitflap .status {
+  position: absolute; /* Position absolutely within the row */
+  right: 60px; /* Move even further to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Fine-tune vertical centering */
+}
+
+/* Current date styling */
+#current-date {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Specific styling for header alignment */
+/* Type header */
+.splitflap .header:nth-child(1) {
+  width: 120px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+/* Offer header */
+.splitflap .header:nth-child(2) {
+  width: 360px;
+  margin-left: 30px;
+  text-align: left;
+}
+
+/* Days Ago header - adjust position to align with data */
+.splitflap .header:nth-child(3) {
+  width: 120px;
+  margin-left: 350px;
+  text-align: center;
+}
+
+/* Notes header - adjust position to align with data */
+.splitflap .header:nth-child(4) {
+  width: 370px;
+  margin-left: 120px;
+  text-align: left;
+}
+
+/* Additional styling for modern look */
+.splitflap {
+  color: #E0E0E0; /* Light gray for text */
+  padding: 35px; /* More padding */
+  border-radius: 10px; /* More rounded corners */
+  background-color: rgba(30,45,60,0.4); /* Slightly blue-tinted background for the board */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 50px rgba(0,0,0,0.1) inset; /* Enhanced shadow with inner glow */
+  margin: 25px auto; /* Center the board with margin */
+  border: 1px solid rgba(74,107,138,0.3); /* Subtle border around the board */
+}
+
+/* Keep split-flap boxes black background with yellow text */
+.splitflap .full,
+.splitflap .number,
+.splitflap .character {
+  background-color: #000000;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3); /* Enhanced shadow */
+  border: 1px solid #333; /* More visible border */
+}
+
+.splitflap .full span,
+.splitflap .number span,
+.splitflap .character span {
+  background-color: #000000;
+}
+
+/* Current time styling */
+#current-time {
+  color: #FFFFFF; /* White text */
+  background-color: rgba(30,45,60,0.7); /* Darker background for better contrast */
+  padding: 12px 25px; /* More padding */
+  border-radius: 30px; /* More rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* Enhanced shadow */
+  font-size: 1.3em; /* Larger font */
+  font-weight: bold; /* Bold text */
+  top: 35px !important; /* Adjust position */
+  left: 35px !important; /* Adjust position */
+  border: 1px solid rgba(74,107,138,0.4); /* Subtle border */
+}
+
+
