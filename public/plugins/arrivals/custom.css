@@ -1,685 +1,258 @@
-/* ROUTE LOGOS DRUM */
+/* Split-Flap Display Custom CSS for SF Moving Resources Board
+ * Cleaned and optimized version */
+
+/* ==================== CATEGORY TYPE ICONS ==================== */
 .splitflap .image {
   float: left;
   margin-right: 5px;
   width: 115px;
   height: 40px;
-  background: url('Route_bullets.png') no-repeat;
-  background-position: 0px 0px;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  border: 1px solid #444;
 }
+
 .splitflap .image span {
   width: 115px;
   height: 40px;
   display: block;
-  background: url('Route_bullets.png') no-repeat;
-  background-position: 0px -38.3px; /* start with a blank */
-}
-
-.splitflap .image span.ctrn {
-  background-position: 0px -0px;
-} /* transition */
-.splitflap .image span.csp {
-  background-position: 0px -38.3px;
-} /* blank */
-.splitflap .image span.\31 {
-  background-position: 0px -78.5px;
-} /* 1 train */
-.splitflap .image span.\32 {
-  background-position: 0px -117.8px;
-} 
-.splitflap .image span.\33 {
-  background-position: 0px -157px;
-} 
-.splitflap .image span.\34 {
-  background-position: 0px -195.0px;
-} 
-.splitflap .image span.\35 {
-  background-position: 0px -234.0px;
-} 
-.splitflap .image span.\36 {
-  background-position: 0px -272px;
-} 
-.splitflap .image span.\36X {
-  background-position: 0px -311.8px;
-} 
-.splitflap .image span.\37 {
-  background-position: 0px -351.3px;
-} 
-.splitflap .image span.\37X {
-  background-position: 0px -390.6px;
-} 
-.splitflap .image span.A {
-  background-position: 0px -428.0px;
-} 
-.splitflap .image span.B {
-  background-position: 0px -468.1px;
-} 
-.splitflap .image span.C {
-  background-position: 0px -505.0px;
-} 
-.splitflap .image span.D {
-  background-position: 0px -544.0px;
-} 
-.splitflap .image span.E {
-  background-position: 0px -583.9px;
-} 
-.splitflap .image span.F {
-  background-position: 0px -622.1px;
-} 
-.splitflap .image span.FX {
-  background-position: 0px -622.1px;
-} 
-.splitflap .image span.G {
-  background-position: 0px -662.4px;
-} 
-.splitflap .image span.J {
-  background-position: -0.35px -700.7px;
-} 
-.splitflap .image span.L {
-  background-position: -0.24px -740.0px;
-} 
-.splitflap .image span.M {
-  background-position: 0px -779.0px;
-} 
-.splitflap .image span.N {
-  background-position: 0px -820.0px;
-} 
-.splitflap .image span.Q {
-  background-position: 0px -858.0px;
-} 
-.splitflap .image span.R {
-  background-position: 0px -900px;
-} 
-.splitflap .image span.GS {
-  background-position: 0px -939.2px;
-} 
-.splitflap .image span.SI {
-  background-position: 0px -939.2px;
-} 
-.splitflap .image span.H {
-  background-position: 0px -939.2px;
-} 
-.splitflap .image span.FS {
-  background-position: 0px -939.2px;
-} 
-.splitflap .image span.W {
-  background-position: 0px -980.0px;
-} 
-.splitflap .image span.Z {
-  background-position: 0px -1020.7px;
-} 
-
-/* CATEGORY TYPE ICONS */
-.splitflap .image {
-  float: left;
-  margin-right: 5px; /* Return to original margin */
-  width: 115px; /* Return to original width */
-  height: 40px; /* Return to original height */
-  background: #000; /* Black background */
+  background: #000;
   border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.4); /* Enhanced shadow for depth */
-  border: 1px solid #444; /* Lighter border for better definition */
-}
-.splitflap .image span {
-  width: 115px; /* Return to original width */
-  height: 40px; /* Return to original height */
-  display: block;
-  background: #000; /* Black background */
-  border-radius: 5px;
-  color: #fff; /* White text */
+  color: #fff;
   font-weight: bold;
   text-align: center;
-  line-height: 40px; /* Adjusted to match original height */
+  line-height: 40px;
   font-family: Arial, sans-serif;
-  font-size: 16px; /* Maintain increased font size for better readability */
+  font-size: 16px;
 }
 
-/* Placeholder icons for each category type - Using even more vibrant colors that stand out on black */
+/* Core transitions - required for animation */
 .splitflap .image span.ctrn {
-  background-color: #000; /* Black */
+  background-color: #000;
 } 
 .splitflap .image span.csp {
-  background-color: #000; /* Black */
+  background-color: #000;
 } 
-.splitflap .image span.Housing {
-  background-color: #2980b9; /* Richer Blue */
-} 
-.splitflap .image span.Service {
-  background-color: #27ae60; /* Richer Green */
-}
-.splitflap .image span.Item {
-  background-color: #f39c12; /* Richer Orange */
-}
-.splitflap .image span.Event {
-  background-color: #c0392b; /* Richer Deep Orange */
-}
-.splitflap .image span.Job {
-  background-color: #8e44ad; /* Purple */
-}
-.splitflap .image span.Resource {
-  background-color: #16a085; /* Richer Emerald */
-}
-.splitflap .image span.Transport {
-  background-color: #e74c3c; /* Red */
-}
-.splitflap .image span.Storage {
-  background-color: #f1c40f; /* Yellow */
-}
-.splitflap .image span.Education {
-  background-color: #3498db; /* Light Blue */
-}
-.splitflap .image span.Financial {
-  background-color: #1abc9c; /* Richer Teal */
-}
 
-/* Add text to the icons */
-.splitflap .image span.Housing:after {
-  content: "Housing";
-}
-.splitflap .image span.Service:after {
-  content: "Service";
-}
-.splitflap .image span.Item:after {
-  content: "Item";
-}
-.splitflap .image span.Event:after {
-  content: "Event";
-}
-.splitflap .image span.Job:after {
-  content: "Job";
-}
-.splitflap .image span.Resource:after {
-  content: "Resource";
-}
-.splitflap .image span.Transport:after {
-  content: "Transport";
-}
-.splitflap .image span.Storage:after {
-  content: "Storage";
-}
-.splitflap .image span.Education:after {
-  content: "Education";
-}
-.splitflap .image span.Financial:after {
-  content: "Financial";
-}
+/* Category Colors */
+.splitflap .image span.Housing { background-color: #2980b9; }
+.splitflap .image span.Service { background-color: #27ae60; }
+.splitflap .image span.Item { background-color: #f39c12; }
+.splitflap .image span.Event { background-color: #c0392b; }
+.splitflap .image span.Job { background-color: #8e44ad; }
+.splitflap .image span.Resource { background-color: #16a085; }
+.splitflap .image span.Transport { background-color: #e74c3c; }
+.splitflap .image span.Storage { background-color: #f1c40f; }
+.splitflap .image span.Education { background-color: #3498db; }
+.splitflap .image span.Financial { background-color: #1abc9c; }
 
-/* STATUS INDICATORS */
+/* Category Text Labels */
+.splitflap .image span.Housing:after { content: "Housing"; }
+.splitflap .image span.Service:after { content: "Service"; }
+.splitflap .image span.Item:after { content: "Item"; }
+.splitflap .image span.Event:after { content: "Event"; }
+.splitflap .image span.Job:after { content: "Job"; }
+.splitflap .image span.Resource:after { content: "Resource"; }
+.splitflap .image span.Transport:after { content: "Transport"; }
+.splitflap .image span.Storage:after { content: "Storage"; }
+.splitflap .image span.Education:after { content: "Education"; }
+.splitflap .image span.Financial:after { content: "Financial"; }
+
+/* ==================== STATUS INDICATORS ==================== */
 .splitflap .sA {
-  background-color: #2ecc71; /* Brighter Green for "Open" */
+  background-color: #2ecc71; /* Green for "Open" */
 }
 .splitflap .sB {
-  background-color: #e74c3c; /* Brighter Red for "Application Required" */
+  background-color: #e74c3c; /* Red for "Application Required" */
 }
 
-/* SF THEME COLORS - Updated for better contrast */
+/* ==================== SF THEME COLORS ==================== */
 body {
-  background-color: #0f1a24; /* Even darker navy blue background for better contrast */
+  background-color: #0f1a24; /* Dark navy blue background */
 }
 
 .splitflap .header {
-  color: #FFFFFF; /* White for headers */
-  border-bottom: 3px solid #4A6B8A; /* Thicker border for better separation */
-  padding-bottom: 5px; /* Add some padding below the border */
-  font-weight: 800; /* Extra bold for better visibility */
-  letter-spacing: 1px; /* Spacing between letters for better readability */
-  text-align: center; /* Center all headers for consistency */
+  color: #FFFFFF;
+  border-bottom: 3px solid #4A6B8A;
+  padding-bottom: 5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 #station-title {
-  color: #FFFFFF; /* White for title */
-  border-bottom: 3px solid #4A6B8A; /* Thicker border */
-  margin-bottom: 40px; /* Even more space below title */
-  padding-bottom: 10px; /* Add padding below the border */
-  font-size: 3em; /* Larger title */
-  letter-spacing: 2px; /* Letter spacing for emphasis */
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Text shadow for depth */
+  color: #FFFFFF;
+  border-bottom: 3px solid #4A6B8A;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  font-size: 3em;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Row styling - updated to ensure status indicators work properly */
+/* ==================== ROW STYLING ==================== */
 .splitflap .row {
-  height: 60px; /* Original row height */
-  margin-bottom: 15px; /* Keep the added space between rows */
-  position: relative; /* Add position context for absolute positioning */
+  height: 60px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
-/* Status indicators should be at the right side of each row */
+/* Status indicators positioning */
 .splitflap .status {
   position: absolute;
   right: 60px;
   top: 50%;
-  transform: translateY(calc(-50% - 7px)); /* Moved status icons up by 7px */
+  transform: translateY(-50%);
 }
 
-/* Current date styling */
-#current-date {
-  color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-/* Specific styling for header alignment */
-/* Type header */
-.splitflap .header:nth-child(1) {
-  width: 120px;
-  margin-left: 0px;
-  text-align: center;
-}
-
-/* Offer header */
-.splitflap .header:nth-child(2) {
-  width: 360px;
-  margin-left: 30px;
-  text-align: left;
-}
-
-/* Days Ago header - adjust position to align with data */
-.splitflap .header:nth-child(3) {
-  width: 120px;
-  margin-left: 350px;
-  text-align: center;
-}
-
-/* Notes header - adjust position to align with data */
-.splitflap .header:nth-child(4) {
-  width: 370px;
-  margin-left: 180px;
-  text-align: left;
-}
-
-/* Additional styling for modern look */
-.splitflap {
-  color: #E0E0E0; /* Light gray for text */
-  padding: 35px; /* More padding */
-  border-radius: 10px; /* More rounded corners */
-  background-color: rgba(30,45,60,0.4); /* Slightly blue-tinted background for the board */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 50px rgba(0,0,0,0.1) inset; /* Enhanced shadow with inner glow */
-  margin: 25px auto; /* Center the board with margin */
-  border: 1px solid rgba(74,107,138,0.3); /* Subtle border around the board */
-}
-
-/* Keep split-flap boxes black background with yellow text */
-.splitflap .full,
-.splitflap .number,
-.splitflap .character {
-  background-color: #000000;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3); /* Enhanced shadow */
-  border: 1px solid #333; /* More visible border */
-}
-
-.splitflap .full span,
-.splitflap .number span,
-.splitflap .character span {
-  background-color: #000000;
-}
-
-/* Current time styling */
-#current-time {
-  color: #FFFFFF; /* White text */
-  background-color: rgba(30,45,60,0.7); /* Darker background for better contrast */
-  padding: 12px 25px; /* More padding */
-  border-radius: 30px; /* More rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* Enhanced shadow */
-  font-size: 1.3em; /* Larger font */
-  font-weight: bold; /* Bold text */
-  top: 35px !important; /* Adjust position */
-  left: 35px !important; /* Adjust position */
-  border: 1px solid rgba(74,107,138,0.4); /* Subtle border */
-}
-
-/* AIRPORT STYLE HEADER */
+/* ==================== AIRPORT HEADER STYLING ==================== */
 .airport-header {
-    text-align: center;
-    position: relative;
-    padding: 20px 0;
-    background-color: #0f1a24;
-    border-bottom: 3px solid #FFD700;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-}
-
-.airport-header .button-container {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.airport-header:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
-    z-index: 5;
+  background-color: #0f1a24;
+  color: #FFD700;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid #4A6B8A;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 2020px; /* Match the splitflap width */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 .airport-header h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 5rem;
-    font-weight: bold;
-    color: #FFD700;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    position: relative;
-}
-
-.airport-header h1:after {
-    content: 'ARRIVALS SF';
-    position: absolute;
-    top: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 215, 0, 0.3);
-    z-index: -1;
-    filter: blur(4px);
+  font-size: 3.5em;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .airport-header p {
-    color: #CCC;
-    font-size: 1.5rem;
-    margin-top: 8px;
-    font-weight: 300;
-    letter-spacing: 1px;
+  font-size: 1.5em;
+  margin: 5px 0 0;
+  opacity: 0.9;
 }
 
-/* Add styles for the header chat link */
-.header-chat-link {
-    margin: 25px 10px 15px;
-    display: inline-block;
-    padding: 16px 40px;
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-    border: 2px solid #FFD700;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 215, 0, 0.15);
-    position: relative;
-    overflow: hidden;
-    animation: subtleGlow 3s infinite;
-    letter-spacing: 1px;
+/* ==================== BUTTON STYLING ==================== */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-@keyframes subtleGlow {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-    }
-    50% {
-        box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-    }
+.header-chat-link, 
+.header-ambiance-toggle {
+  display: inline-flex;
+  align-items: center;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  border: 2px solid #3498db;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.header-chat-link:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        rgba(255, 215, 0, 0), 
-        rgba(255, 215, 0, 0.3), 
-        rgba(255, 215, 0, 0));
-    transition: all 0.6s ease;
+.header-chat-link:hover, 
+.header-ambiance-toggle:hover {
+  background-color: #34495e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
-.header-chat-link:hover {
-    background-color: rgba(255, 215, 0, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+.header-chat-link svg, 
+.header-ambiance-toggle svg {
+  margin-right: 10px;
 }
 
-.header-chat-link:hover:before {
-    left: 100%;
+.header-ambiance-toggle.muted {
+  border-color: #e74c3c;
 }
 
-.header-chat-link svg {
-    margin-right: 12px;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-    width: 22px;
-    height: 22px;
-}
-
-/* Remove the old chat button styles */
-.chat-button {
-    display: none; /* Hide the old button, keeping the CSS in case it's referenced elsewhere */
-}
-
-@keyframes pulse {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
-}
-
-/* CHAT MODAL */
+/* ==================== CHAT MODAL STYLING ==================== */
 .chat-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
 .chat-modal-content {
-    background-color: #142536;
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 550px;
-    width: 90%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    border: 3px solid #FFD700;
-    position: relative;
-    animation: modalAppear 0.4s ease-out;
-}
-
-@keyframes modalAppear {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.chat-modal-content:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
-    z-index: 5;
-    border-radius: 5px 5px 0 0;
-}
-
-.chat-modal-content h2 {
-    color: #FFD700;
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-}
-
-.chat-modal-content h2:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: #FFD700;
-}
-
-.chat-modal-content p {
-    color: #FFF;
-    margin-bottom: 25px;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-.chat-join-button {
-    background: linear-gradient(135deg, #FFD700, #FFC107);
-    color: #142536;
-    border: none;
-    padding: 14px 35px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.chat-join-button:hover {
-    background: linear-gradient(135deg, #FFC107, #FFD700);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
-}
-
-.chat-join-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: #34495e;
+  color: #ecf0f1;
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border: 2px solid #3498db;
 }
 
 .chat-modal-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: #FFF;
-    font-size: 28px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #bdc3c7;
 }
 
 .chat-modal-close:hover {
-    color: #FFD700;
-    transform: rotate(90deg);
+  color: #ecf0f1;
 }
 
-/* Adjust existing station title styling */
-#station-title {
-    display: none; /* Hide the old title since we have the new airport header */
+.chat-join-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto 0;
+  transition: background-color 0.3s ease;
 }
 
-/* Adjust the board container to make room for the header */
-#board.chartContainer {
-    margin-top: 20px;
+.chat-join-button:hover {
+  background-color: #2980b9;
 }
 
-/* Ambiance Toggle Button - styled similar to the chat link */
-.header-ambiance-toggle {
-    margin: 25px 10px 15px;
-    display: inline-block;
-    padding: 16px 40px;
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-    border: 2px solid #FFD700;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 215, 0, 0.15);
-    position: relative;
-    overflow: hidden;
-    animation: subtleGlow 3s infinite;
-    letter-spacing: 1px;
+/* ==================== RESPONSIVE ADJUSTMENTS ==================== */
+@media (max-width: 1200px) {
+  .splitflap .header {
+    font-size: 14px;
+  }
+  
+  #station-title {
+    font-size: 2.5em;
+  }
+  
+  .airport-header h1 {
+    font-size: 3em;
+  }
 }
 
-.header-ambiance-toggle:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        rgba(255, 215, 0, 0), 
-        rgba(255, 215, 0, 0.3), 
-        rgba(255, 215, 0, 0));
-    transition: all 0.6s ease;
-}
-
-.header-ambiance-toggle:hover {
-    background-color: rgba(255, 215, 0, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.header-ambiance-toggle:hover:before {
-    left: 100%;
-}
-
-.header-ambiance-toggle svg {
-    margin-right: 12px;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-    width: 22px;
-    height: 22px;
-}
-
-/* Muted state styling */
-.header-ambiance-toggle.muted {
-    background-color: rgba(255, 215, 0, 0.05);
-    border-color: rgba(255, 215, 0, 0.5);
-    color: rgba(255, 215, 0, 0.5);
-}
-
-/* State where autoplay is blocked and sound is initially off */
-.header-ambiance-toggle.sound-off svg path,
-.header-ambiance-toggle.sound-off svg polygon {
-    stroke-dasharray: 4;
-    stroke-dashoffset: 0;
-}
-
-/* Add special styling for today entries */
-.splitflap .row.today-entry {
-  background-color: rgba(255, 215, 0, 0.1); /* Subtle gold background */
-  border-left: 4px solid #FFD700; /* Gold left border */
-  position: relative;
-}
-
-/* Style for the TDY text */
-.splitflap .row .today-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #FFD700;
-  font-weight: bold;
-  font-size: 22px;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .header-chat-link, 
+  .header-ambiance-toggle {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
 }
 
 

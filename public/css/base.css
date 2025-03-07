@@ -2,7 +2,14 @@ body {
   background: #0f1a24; /* Darker navy blue for better contrast */
   color: #E0E0E0; /* Light gray text for general content */
   font-family: helvetica, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden; /* Only hide horizontal overflow, allow vertical scrolling if needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -11,10 +18,12 @@ a {
 }
 .splitflap {
   width: 2020px; /* Reduce from 2200px to remove excess whitespace */
+  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
   overflow: hidden;
   white-space: nowrap;
-  margin: 5px 5px;
+  margin: 5px auto; /* Changed from 5px 5px to center the board */
   color: #E0E0E0; /* Light gray for general text */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 .splitflap h1 {
   text-transform: uppercase;

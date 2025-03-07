@@ -1,0 +1,26 @@
+{
+  "data": {
+    "csv_file_path": "sf_resources.csv",
+    "output_json_path": "output.json"
+  },
+  "server": {
+    "port": 8080
+  },
+  "refresh": {
+    "interval_seconds": 20
+  },
+  "display": {
+    "max_results": 45,
+    "sort_by": "scheduled",
+    "sort_order": "asc",
+    "page_interval_ms": 20000,
+    "stagger_ms": 300
+  },
+  "logging": {
+    "enable_debug": false,
+    "log_to_file": true,
+    "log_directory": "logs",
+    "max_log_files": 7,
+    "log_level": "INFO"
+  }
+} 
