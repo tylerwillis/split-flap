@@ -74,6 +74,12 @@ If you prefer to start components individually:
 5. **Auto-refresh**: The board refreshes every 20 seconds with the latest data
 6. **Community Integration**: Users can join a Discord community for SF newcomers directly from the board
 
+### Sorting Logic
+
+The resources are sorted to display the newest entries first:
+- The Python script (`sf_resources.py`) sorts entries based on the number of days since posting, with "Today" entries prioritized at the top.
+- The frontend (`public/index.html`) sorts entries in ascending order (`order: 'asc'`) to ensure the newest entries appear first.
+
 ## 🔧 Customizing Listings
 
 ### Data Management and Refresh

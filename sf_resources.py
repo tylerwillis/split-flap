@@ -55,9 +55,10 @@ def format_date_posted(date_str):
         
         if days_since == 0:
             return "Today"
-        elif days_since == 1:
-            return "1"
+        elif days_since > 0:
+            return f"{days_since}"
         else:
+            # Handle future dates - show as negative days (e.g. "-30" for dates 30 days in the future)
             return f"{days_since}"
     except Exception as e:
         print(f"Error formatting date: {e}")
@@ -73,23 +74,29 @@ def main():
     transformed_data = []
     for resource in resources:
         # Map CSV fields to the expected JSON structure
+        arrival_time = format_date_posted(resource.get("date_posted", ""))
+        offer = resource.get("offer", "Unknown offer")
+        
         transformed_resource = {
             "route_id": resource.get("type", "Unknown"),
-            "arrival_time": format_date_posted(resource.get("date_posted", "")),
+            "arrival_time": arrival_time,
             "current_stop": "San Francisco",
-            "last_stop_name": resource.get("offer", "Unknown offer"),
+            "last_stop_name": offer,
             "service_status": resource.get("notes", "")
         }
         
         # Add the resource to the transformed data
         transformed_data.append(transformed_resource)
     
-    # Sort the data by date (most recent first)
+    # Sort the data by days ago (newest first - smaller number of days = more recent)
+    # For "Today" entries, use 0 to ensure they're at the top
     transformed_data = sorted(
-        transformed_data, 
-        key=lambda x: 0 if x["arrival_time"] == "Today" else 
-                      1 if x["arrival_time"] == "1 day" else
-                      int(x["arrival_time"].split()[0]) if x["arrival_time"].split()[0].isdigit() else 999
+        transformed_data,
+        key=lambda x: (
+            0 if x["arrival_time"] == "Today" else
+            int(x["arrival_time"]) if x["arrival_time"].strip().isdigit() else
+            999
+        )
     )
     
     # Write the transformed data to output.json
@@ -97,9 +104,9 @@ def main():
         json.dump(transformed_data, file, indent=4)
     
     print(f"Data successfully written to {OUTPUT_JSON_PATH}")
+    print(f"Waiting {REFRESH_INTERVAL} seconds before next update...")
 
 if __name__ == "__main__":
     while True:
         main()
-        print(f"Waiting {REFRESH_INTERVAL} seconds before next update...")
         time.sleep(REFRESH_INTERVAL) 

@@ -1,128 +1,107 @@
 [
     {
-        "route_id": "Job",
-        "arrival_time": "5",
-        "current_stop": "San Francisco",
-        "last_stop_name": "Tyler that's mean",
-        "service_status": "Tyler says Hi"
-    },
-    {
-        "route_id": "Job",
-        "arrival_time": "5",
-        "current_stop": "San Francisco",
-        "last_stop_name": "ODF",
-        "service_status": "Tyler says whhhhat"
-    },
-    {
-        "route_id": "Job",
-        "arrival_time": "6",
-        "current_stop": "San Francisco",
-        "last_stop_name": "On Deck",
-        "service_status": "Julian Waz Here"
-    },
-    {
-        "route_id": "Resource",
-        "arrival_time": "519",
-        "current_stop": "San Francisco",
-        "last_stop_name": "Healthcare providers list",
-        "service_status": "Accepting new patients"
-    },
-    {
-        "route_id": "Job",
-        "arrival_time": "523",
-        "current_stop": "San Francisco",
-        "last_stop_name": "Retailf position",
-        "service_status": "Flexible hours"
-    },
-    {
         "route_id": "Housing",
-        "arrival_time": "524",
+        "arrival_time": "67",
         "current_stop": "San Francisco",
         "last_stop_name": "3BR House in Sunset",
         "service_status": "Backyard available"
     },
     {
         "route_id": "Storage",
-        "arrival_time": "527",
+        "arrival_time": "70",
         "current_stop": "San Francisco",
         "last_stop_name": "Temporary storage solution",
         "service_status": "Climate controlled"
     },
     {
+        "route_id": "Job",
+        "arrival_time": "72",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Software Engineer",
+        "service_status": "Remote friendly"
+    },
+    {
         "route_id": "Financial",
-        "arrival_time": "529",
+        "arrival_time": "72",
         "current_stop": "San Francisco",
         "last_stop_name": "Banking setup assistance",
         "service_status": "Major banks covered"
     },
     {
         "route_id": "Education",
-        "arrival_time": "532",
+        "arrival_time": "75",
         "current_stop": "San Francisco",
         "last_stop_name": "SF neighborhood orientation",
         "service_status": "Group sessions available"
     },
     {
+        "route_id": "Item",
+        "arrival_time": "77",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Furniture giveaway",
+        "service_status": "Pick up only"
+    },
+    {
         "route_id": "Transport",
-        "arrival_time": "534",
+        "arrival_time": "77",
         "current_stop": "San Francisco",
         "last_stop_name": "Airport pickup service",
         "service_status": "Available 24/7"
     },
     {
+        "route_id": "Housing",
+        "arrival_time": "82",
+        "current_stop": "San Francisco",
+        "last_stop_name": "2BR Apartment in Mission",
+        "service_status": "Pet friendly"
+    },
+    {
         "route_id": "Item",
-        "arrival_time": "539",
+        "arrival_time": "82",
         "current_stop": "San Francisco",
         "last_stop_name": "Kitchen appliances",
         "service_status": "Like new condition"
     },
     {
         "route_id": "Service",
-        "arrival_time": "542",
+        "arrival_time": "85",
         "current_stop": "San Francisco",
         "last_stop_name": "Cleaning service",
         "service_status": "First cleaning free"
     },
     {
         "route_id": "Housing",
-        "arrival_time": "544",
+        "arrival_time": "87",
         "current_stop": "San Francisco",
         "last_stop_name": "Studio in SOMA",
         "service_status": "Utilities included"
     },
     {
         "route_id": "Resource",
-        "arrival_time": "549",
+        "arrival_time": "92",
         "current_stop": "San Francisco",
         "last_stop_name": "Neighborhood guide",
         "service_status": "Free digital download"
     },
     {
+        "route_id": "Resource",
+        "arrival_time": "92",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Healthcare providers list",
+        "service_status": "Accepting new patients"
+    },
+    {
         "route_id": "Service",
-        "arrival_time": "553",
+        "arrival_time": "96",
         "current_stop": "San Francisco",
         "last_stop_name": "Moving assistance",
         "service_status": "Available weekends"
     },
     {
         "route_id": "Job",
-        "arrival_time": "560",
+        "arrival_time": "96",
         "current_stop": "San Francisco",
-        "last_stop_name": "Software Engineer",
-        "service_status": "Remote friendly"
-    },
-    {
-        "route_id": "Item",
-        "arrival_time": "565",
-        "current_stop": "San Francisco",
-        "last_stop_name": "Furniture giveaway",
-        "service_status": "Pick up only"
-    },
-    {
-        "route_id": "Housing",
-        "arrival_time": "570",
-        "current_stop": "San Francisco",
-        "last_stop_name": "2BR Apartment in Mission",
-        "service_status": "Pet friendly"
+        "last_stop_name": "Retailf position",
+        "service_status": "Flexible hours"
     }
 ]
