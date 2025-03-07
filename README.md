@@ -85,6 +85,22 @@ To add or update resources:
 
 The Python script (`sf_resources.py`) reads this CSV file and updates the `output.json` every 20 seconds. The Node.js server (`app.js`) then refreshes the displayed data every 20 seconds, ensuring your changes appear promptly on the split-flap display.
 
+### Changing Refresh Interval
+
+To adjust the refresh interval:
+
+- **Python script (`sf_resources.py`)**: Change the `REFRESH_INTERVAL` variable (in seconds).
+  ```python
+  REFRESH_INTERVAL = 20  # Adjust this value as needed
+  ```
+
+- **Node.js server (`app.js`)**: Change the interval in the `setInterval` function (in milliseconds).
+  ```javascript
+  setInterval(() => {
+    jsonData = readJsonFile();
+  }, 20000); // Adjust this value as needed
+  ```
+
 ### Adding or Editing Resources
 
 Simply edit the `sf_resources.csv` file, following this structure:
