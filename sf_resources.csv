@@ -1,16 +1,21 @@
 type,offer,date_posted,notes,status
-Housing,2BR Apartment in Mission,2024-12-15,Pet friendly,Open
-Service,Moving assistance,2024-12-01,Available weekends,Application Required
-Item,Furniture giveaway,2024-12-20,Pick up only,Open
-Job,Software Engineer,2024-12-25,Remote friendly,Application Required
-Resource,Neighborhood guide,2024-12-05,Free digital download,Open
-Housing,Studio in SOMA,2024-12-10,Utilities included,Open
-Service,Cleaning service,2024-12-12,First cleaning free,Application Required
-Item,Kitchen appliances,2024-12-15,Like new condition,Open
-Transport,Airport pickup service,2024-12-20,Available 24/7,Application Required
-Education,SF neighborhood orientation,2024-12-22,Group sessions available,Open
-Financial,Banking setup assistance,2024-12-25,Major banks covered,Open
-Storage,Temporary storage solution,2024-12-27,Climate controlled,Application Required
-Housing,3BR House in Sunset,2024-12-30,Backyard available,Application Required
-Job,Retailf position,2024-12-01,Flexible hours,Open
-Resource,Healthcare providers list,2024-12-05,Accepting new patients,Open 
+Housing,Guest Room in Pacific Heights,2025-01-28,Stay up to a week,Open
+Event,Friday Night Rooftop Party,2025-01-30,Be my plus one,Open
+Service,Coffee Chat with Serial Founder,2025-02-02,Insights and networking,Application Required
+Housing,Couch Surfing in Castro,2025-02-05,Great location, friendly host,Open
+Event,Sunday Brunch Meetup,2025-02-07,Local founders gathering,Open
+Housing,Temporary Stay in Nob Hill,2025-02-10,Private room available,Application Required
+Event,Tech Founder Hiking Group,2025-02-12,Monthly outdoor meetups,Open
+Service,City Tour by Local Founder,2025-02-15,Explore hidden gems,Open
+Event,Startup Pitch Night,2025-02-17,Join as my guest,Open
+Transport,Airport Pickup by Founder,2025-02-20,Personal welcome to SF,Application Required
+Housing,Shared Apartment in Mission,2025-02-22,Stay for a month,Open
+Event,Beach Bonfire Networking,2025-02-25,Relaxed social event,Open
+Housing,Loft Space in SoMa,2025-02-27,Short-term stay,Application Required
+Event,Exclusive Dinner Party,2025-03-01,Hosted by local VC,Application Required
+Service,Weekend Sailing Trip,2025-03-03,Join local founders,Open
+Resource,Local Hangout Spots Guide,2025-03-05,Curated by founders,Open
+Service,Photography Walk,2025-03-06,Explore SF through a lens,Open
+Item,Home Office Setup Giveaway,2025-03-07,Perfect for remote work,Open
+Event,Monthly Founders' Mixer,2025-03-07,Networking and drinks,Open
+Housing,Modern Condo in Financial District,2025-03-07,Short-term stay,Open 
