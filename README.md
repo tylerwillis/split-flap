@@ -10,9 +10,12 @@ This project adapts a subway split-flap display to show information about servic
 
 ### Features
 
+- **Airport-Style "Arrivals SF" Header**: Large, prominent display reminiscent of airport arrival boards
 - **Animated Split-Flap Display**: Authentic animation mimicking mechanical character flipping
 - **Resource Categories**: Color-coded categories including Housing, Services, Items, Jobs, etc.
 - **Status Indicators**: Visual indicators showing if resources are "Open" or require application
+- **Community Chat Integration**: Button to join a Discord community for SF newcomers
+- **Airport Ambiance Sound**: Authentic background audio to enhance the airport-like experience
 - **Auto-Refresh**: Display automatically updates every 5 minutes
 - **Easy Data Management**: Simple CSV format for adding/editing resources
 - **Responsive Display**: Works in horizontal or vertical orientation
@@ -69,6 +72,7 @@ If you prefer to start components individually:
 3. **Server**: A Node.js application (`app.js`) serves the data through an API endpoint
 4. **Frontend**: HTML/CSS/JS creates the animated split-flap board display
 5. **Auto-refresh**: The board refreshes every 5 minutes with the latest data
+6. **Community Integration**: Users can join a Discord community for SF newcomers directly from the board
 
 ## 🔧 Customizing Listings
 
@@ -128,6 +132,14 @@ The current icons are colored blocks with text. To use custom icons:
    }
    ```
 
+### Customizing the Community Chat
+
+You can update the Discord invite link by editing the JavaScript in `public/index.html`:
+
+1. Locate the chat button click handler section
+2. Change the Discord invite URL in the `window.open()` function
+3. You can also modify the chat modal text and appearance through CSS
+
 ## 🔍 Troubleshooting
 
 - **Changes not appearing**: The board refreshes every 5 minutes. Restart the server to see changes immediately.
@@ -139,7 +151,6 @@ The current icons are colored blocks with text. To use custom icons:
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 🙏 Acknowledgments
-
 
 - Forked from David Tropiansky's [Subway Split Flap Solari v1.5](https://github.com/DavidTropiansky/Subway-Split-Flap-Solari-v1.5)
 - Original split-flap template from [baspete's project](https://github.com/baspete/Split-Flap/)

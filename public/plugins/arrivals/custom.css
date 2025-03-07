@@ -284,7 +284,7 @@ body {
 /* Notes header - adjust position to align with data */
 .splitflap .header:nth-child(4) {
   width: 370px;
-  margin-left: 120px;
+  margin-left: 180px;
   text-align: left;
 }
 
@@ -326,6 +326,341 @@ body {
   top: 35px !important; /* Adjust position */
   left: 35px !important; /* Adjust position */
   border: 1px solid rgba(74,107,138,0.4); /* Subtle border */
+}
+
+/* AIRPORT STYLE HEADER */
+.airport-header {
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+    background-color: #0f1a24;
+    border-bottom: 3px solid #FFD700;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.airport-header .button-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.airport-header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+    z-index: 5;
+}
+
+.airport-header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.airport-header h1:after {
+    content: 'ARRIVALS SF';
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 215, 0, 0.3);
+    z-index: -1;
+    filter: blur(4px);
+}
+
+.airport-header p {
+    color: #CCC;
+    font-size: 1.5rem;
+    margin-top: 8px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Add styles for the header chat link */
+.header-chat-link {
+    margin: 25px 10px 15px;
+    display: inline-block;
+    padding: 16px 40px;
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    border: 2px solid #FFD700;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 215, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    animation: subtleGlow 3s infinite;
+    letter-spacing: 1px;
+}
+
+@keyframes subtleGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+}
+
+.header-chat-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 215, 0, 0), 
+        rgba(255, 215, 0, 0.3), 
+        rgba(255, 215, 0, 0));
+    transition: all 0.6s ease;
+}
+
+.header-chat-link:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.header-chat-link:hover:before {
+    left: 100%;
+}
+
+.header-chat-link svg {
+    margin-right: 12px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+}
+
+/* Remove the old chat button styles */
+.chat-button {
+    display: none; /* Hide the old button, keeping the CSS in case it's referenced elsewhere */
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+/* CHAT MODAL */
+.chat-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.chat-modal-content {
+    background-color: #142536;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 550px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border: 3px solid #FFD700;
+    position: relative;
+    animation: modalAppear 0.4s ease-out;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.chat-modal-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+    z-index: 5;
+    border-radius: 5px 5px 0 0;
+}
+
+.chat-modal-content h2 {
+    color: #FFD700;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.chat-modal-content h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #FFD700;
+}
+
+.chat-modal-content p {
+    color: #FFF;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.chat-join-button {
+    background: linear-gradient(135deg, #FFD700, #FFC107);
+    color: #142536;
+    border: none;
+    padding: 14px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.chat-join-button:hover {
+    background: linear-gradient(135deg, #FFC107, #FFD700);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+}
+
+.chat-join-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chat-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #FFF;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.chat-modal-close:hover {
+    color: #FFD700;
+    transform: rotate(90deg);
+}
+
+/* Adjust existing station title styling */
+#station-title {
+    display: none; /* Hide the old title since we have the new airport header */
+}
+
+/* Adjust the board container to make room for the header */
+#board.chartContainer {
+    margin-top: 20px;
+}
+
+/* Ambiance Toggle Button - styled similar to the chat link */
+.header-ambiance-toggle {
+    margin: 25px 10px 15px;
+    display: inline-block;
+    padding: 16px 40px;
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    border: 2px solid #FFD700;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 215, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    animation: subtleGlow 3s infinite;
+    letter-spacing: 1px;
+}
+
+.header-ambiance-toggle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 215, 0, 0), 
+        rgba(255, 215, 0, 0.3), 
+        rgba(255, 215, 0, 0));
+    transition: all 0.6s ease;
+}
+
+.header-ambiance-toggle:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.header-ambiance-toggle:hover:before {
+    left: 100%;
+}
+
+.header-ambiance-toggle svg {
+    margin-right: 12px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+}
+
+/* Muted state styling */
+.header-ambiance-toggle.muted {
+    background-color: rgba(255, 215, 0, 0.05);
+    border-color: rgba(255, 215, 0, 0.5);
+    color: rgba(255, 215, 0, 0.5);
+}
+
+/* State where autoplay is blocked and sound is initially off */
+.header-ambiance-toggle.sound-off svg path,
+.header-ambiance-toggle.sound-off svg polygon {
+    stroke-dasharray: 4;
+    stroke-dashoffset: 0;
 }
 
 

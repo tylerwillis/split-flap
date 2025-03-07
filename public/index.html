@@ -3,16 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Francisco Moving Resources</title>
+    <title>Welcome to SF Arrivals</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="plugins/arrivals/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- CURRENT TIME -->
-    <div id="current-time" style="position: absolute; top: 25px; left: 25px; font-size: 30px; font-weight: bold;"></div>
-    
-    <!-- CURRENT DATE (moved to right side) -->
-    <div id="current-date" style="position: absolute; top: 25px; right: 25px; font-size: 30px; font-weight: bold;"></div>
+    <!-- AIRPORT STYLE HEADER -->
+    <div class="airport-header">
+        <!-- CURRENT TIME -->
+        <div id="current-time" style="position: absolute; top: 35px; left: 35px; font-size: 30px; font-weight: bold; color: #FFD700;"></div>
+        
+        <h1>Arrivals SF</h1>
+        <p>Resources for Moving to San Francisco</p>
+        
+        <!-- Buttons Container -->
+        <div class="button-container">
+            <!-- Join Chat Link -->
+            <a href="#" class="header-chat-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                Join the Group Chat!
+            </a>
+
+            <!-- Ambiance Toggle Button -->
+            <a href="#" class="header-ambiance-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                </svg>
+                Turn Off Ambiance
+            </a>
+        </div>
+        
+        <!-- Airport Ambiance Audio -->
+        <audio id="airport-ambiance" loop preload="auto" autoplay>
+            <source src="audio/sfo.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- CURRENT DATE (moved to right side) -->
+        <div id="current-date" style="position: absolute; top: 35px; right: 35px; font-size: 30px; font-weight: bold; color: #FFD700;"></div>
+    </div>
 
     <!-- CONTAINER -->
     <div id="board" class="chartContainer splitflap">
@@ -21,12 +55,23 @@
         <!-- Header: Updated headers for SF moving resources -->
         <div class="header" style="width:120px;margin-left:0px;">Type</div>
         <div class="header" style="width:360px;margin-left:30px;text-align:left;">Offer</div>
-        <div class="header" style="width:120px;margin-left:350px;text-align:center;">Days Ago</div>
-        <div class="header" style="width:370px;margin-left:120px;text-align:left;">Notes</div>
+        <div class="header" style="width:120px;margin-left:628px;text-align:center;">Days Ago</div>
+        <div class="header" style="width:370px;margin-left:32px;text-align:left;">Notes</div>
 
         <!-- rows will be placed here dynamically from #row_template -->
     </div>
     <!-- END CONTAINER -->
+
+    <!-- CHAT MODAL -->
+    <div class="chat-modal">
+        <div class="chat-modal-content">
+            <span class="chat-modal-close">&times;</span>
+            <h2>Join the SF Newcomers Community</h2>
+            <p>Connect with others who are moving to San Francisco. Share tips, ask questions, and make connections before you arrive!</p>
+            <p>Our community is hosted on Discord where you can chat with other newcomers and SF locals who are happy to help.</p>
+            <button class="chat-join-button">Join Discord Community</button>
+        </div>
+    </div>
 
     <!-- ROW TEMPLATE -->
     <script type="text/template" id="row_template">
@@ -37,6 +82,11 @@
 
             <div class="group terminal"> <!-- offer -->
                 <!-- Repeat full divs as needed -->
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
+                <div class="full"><span></span></div>
                 <div class="full"><span></span></div>
                 <div class="full"><span></span></div>
                 <div class="full"><span></span></div>
@@ -149,8 +199,127 @@
             setInterval(updateTimeAndDate, 1000);
             updateTimeAndDate(); // Initial call to display time and date immediately
 
-            // Set the title to San Francisco Moving Resources
-            $('#station-title').text('San Francisco Moving Resources');
+            // Chat link functionality - update selector from button to link
+            $('.header-chat-link').click(function(e) {
+                e.preventDefault(); // Prevent the default link behavior
+                $('.chat-modal').css('display', 'flex');
+            });
+
+            // Close modal when clicking the X
+            $('.chat-modal-close').click(function() {
+                $('.chat-modal').css('display', 'none');
+            });
+
+            // Close modal when clicking outside the content
+            $('.chat-modal').click(function(e) {
+                if(e.target === this) {
+                    $(this).css('display', 'none');
+                }
+            });
+
+            // Join Discord button action
+            $('.chat-join-button').click(function() {
+                // Replace with your actual Discord invite link
+                window.open('https://discord.gg/sfdiscord', '_blank');
+            });
+
+            // Airport ambiance audio functionality
+            const ambianceAudio = document.getElementById('airport-ambiance');
+            const ambianceButton = $('.header-ambiance-toggle');
+            let isAudioPlaying = false; // Start with the assumption that audio is not playing
+            
+            // Set audio volume to a pleasant background level
+            ambianceAudio.volume = 0.2;
+
+            // Function to update button text and styling based on audio state
+            function updateAmbianceButton() {
+                if (isAudioPlaying) {
+                    ambianceButton.html(`
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                        Turn Off Ambiance
+                    `);
+                    ambianceButton.removeClass('muted sound-off');
+                } else {
+                    ambianceButton.html(`
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                        Turn On Ambiance
+                    `);
+                    ambianceButton.addClass('muted sound-off');
+                }
+            }
+
+            // Try to play audio when page loads
+            try {
+                // Initial attempt to play - might be blocked
+                const playPromise = ambianceAudio.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        console.log("Autoplay started successfully");
+                        isAudioPlaying = true;
+                        updateAmbianceButton();
+                    }).catch(error => {
+                        console.log("Autoplay was prevented:", error);
+                        // If autoplay is blocked, ensure we start in the off state
+                        isAudioPlaying = false;
+                        updateAmbianceButton();
+                    });
+                }
+            } catch (e) {
+                console.log("Error with audio playback:", e);
+                isAudioPlaying = false;
+                updateAmbianceButton();
+            }
+
+            // Attach click handler using jQuery for consistency
+            ambianceButton.on('click', function(e) {
+                e.preventDefault();
+                
+                console.log("Button clicked, current state:", isAudioPlaying);
+                
+                if (isAudioPlaying) {
+                    // If playing, pause it
+                    ambianceAudio.pause();
+                    isAudioPlaying = false;
+                    updateAmbianceButton();
+                    console.log("Audio paused");
+                } else {
+                    // If not playing, try to play
+                    try {
+                        const playPromise = ambianceAudio.play();
+                        
+                        if (playPromise !== undefined) {
+                            playPromise.then(() => {
+                                isAudioPlaying = true;
+                                updateAmbianceButton();
+                                console.log("Audio started playing");
+                            }).catch(error => {
+                                console.log("Play was prevented:", error);
+                                // If play is still blocked, ensure we're in the off state
+                                isAudioPlaying = false;
+                                updateAmbianceButton();
+                                alert("Your browser blocked audio playback. Please check your browser settings to allow audio on this site.");
+                            });
+                        }
+                    } catch (e) {
+                        console.log("Error trying to play audio:", e);
+                        isAudioPlaying = false;
+                        updateAmbianceButton();
+                        alert("There was an error playing the audio. Please try again.");
+                    }
+                }
+            });
+
+            // Ensure button starts in the correct state
+            updateAmbianceButton();
         });
     </script>
 </body>
