@@ -1,6 +1,20 @@
 [
     {
         "route_id": "Job",
+        "arrival_time": "4",
+        "current_stop": "San Francisco",
+        "last_stop_name": "Tyler that's mean",
+        "service_status": "Tyler says Hi"
+    },
+    {
+        "route_id": "Job",
+        "arrival_time": "4",
+        "current_stop": "San Francisco",
+        "last_stop_name": "ODF",
+        "service_status": "Tyler says whhhhat"
+    },
+    {
+        "route_id": "Job",
         "arrival_time": "5",
         "current_stop": "San Francisco",
         "last_stop_name": "On Deck",
@@ -17,7 +31,7 @@
         "route_id": "Job",
         "arrival_time": "522",
         "current_stop": "San Francisco",
-        "last_stop_name": "Retail position",
+        "last_stop_name": "Retailf position",
         "service_status": "Flexible hours"
     },
     {

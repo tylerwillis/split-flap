@@ -16,7 +16,7 @@ This project adapts a subway split-flap display to show information about servic
 - **Status Indicators**: Visual indicators showing if resources are "Open" or require application
 - **Community Chat Integration**: Button to join a Discord community for SF newcomers
 - **Airport Ambiance Sound**: Authentic background audio to enhance the airport-like experience
-- **Auto-Refresh**: Display automatically updates every 5 minutes
+- **Auto-Refresh**: Display automatically updates every 20 seconds
 - **Easy Data Management**: Simple CSV format for adding/editing resources
 - **Responsive Display**: Works in horizontal or vertical orientation
 
@@ -71,10 +71,19 @@ If you prefer to start components individually:
 2. **Data Processing**: The Python script `sf_resources.py` converts CSV data to JSON format
 3. **Server**: A Node.js application (`app.js`) serves the data through an API endpoint
 4. **Frontend**: HTML/CSS/JS creates the animated split-flap board display
-5. **Auto-refresh**: The board refreshes every 5 minutes with the latest data
+5. **Auto-refresh**: The board refreshes every 20 seconds with the latest data
 6. **Community Integration**: Users can join a Discord community for SF newcomers directly from the board
 
 ## 🔧 Customizing Listings
+
+### Data Management and Refresh
+
+To add or update resources:
+
+1. Edit the `sf_resources.csv` file following the provided structure.
+2. Save your changes.
+
+The Python script (`sf_resources.py`) reads this CSV file and updates the `output.json` every 20 seconds. The Node.js server (`app.js`) then refreshes the displayed data every 20 seconds, ensuring your changes appear promptly on the split-flap display.
 
 ### Adding or Editing Resources
 
@@ -92,7 +101,7 @@ The columns are:
 - **notes**: Additional details or description
 - **status**: Either "Open" or "Application Required"
 
-After editing, save the file. The display will refresh with your new data within 5 minutes, or you can restart the application to see changes immediately.
+After editing, save the file. The display will refresh with your new data within 20 seconds, or you can restart the application to see changes immediately.
 
 ### Available Categories
 
@@ -142,7 +151,7 @@ You can update the Discord invite link by editing the JavaScript in `public/inde
 
 ## 🔍 Troubleshooting
 
-- **Changes not appearing**: The board refreshes every 5 minutes. Restart the server to see changes immediately.
+- **Changes not appearing**: The board refreshes every 20 seconds. Restart the server to see changes immediately.
 - **Server won't start**: Make sure no other process is using port 8080. You can change the port in `app.js` if needed.
 - **CSV errors**: Ensure your CSV has the correct format with all required columns.
 
